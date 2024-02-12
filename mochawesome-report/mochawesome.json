@@ -1,0 +1,256 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-02-12T14:18:18.397Z",
+    "end": "2024-02-12T14:18:21.289Z",
+    "duration": 2892,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3c3aff2b-363d-4c47-ae5c-a39bfb85ad4f",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "33a96ca2-46b9-43f7-b650-92ebd7ccbf9f",
+          "title": "DELETE API Request Tests",
+          "fullFile": "/home/thor/Projects/test-cases/api-tests/delete_request.js",
+          "file": "/api-tests/delete_request.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able delete user with id 2",
+              "fullTitle": "DELETE API Request Tests should be able delete user with id 2",
+              "timedOut": false,
+              "duration": 667,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await axios.delete('https://reqres.in/api/users/2');\nconsole.log(res.data);\nexpect(res.status).equal(204);",
+              "err": {},
+              "uuid": "adcd1c64-7606-483b-8da8-124d1f4b4493",
+              "parentUUID": "33a96ca2-46b9-43f7-b650-92ebd7ccbf9f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "adcd1c64-7606-483b-8da8-124d1f4b4493"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 667,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "611be6ac-18b8-49cc-9905-599bda4fe90c",
+          "title": "GET API Request Tests",
+          "fullFile": "/home/thor/Projects/test-cases/api-tests/get_request.js",
+          "file": "/api-tests/get_request.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able get user list",
+              "fullTitle": "GET API Request Tests should be able get user list",
+              "timedOut": false,
+              "duration": 236,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await axios.get('https://reqres.in/api/users?page=2');\nconsole.log(res.data);\nexpect(res.data.page).equal(2);\nexpect(res.data.per_page).equal(6);",
+              "err": {},
+              "uuid": "0658cf97-13ff-42e4-ac70-512fae8cfc2f",
+              "parentUUID": "611be6ac-18b8-49cc-9905-599bda4fe90c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0658cf97-13ff-42e4-ac70-512fae8cfc2f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 236,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "5f25a683-6b7d-4beb-8f0a-66f519410bc5",
+          "title": "PATCH API Request Tests",
+          "fullFile": "/home/thor/Projects/test-cases/api-tests/patch_request.js",
+          "file": "/api-tests/patch_request.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able update name of the user",
+              "fullTitle": "PATCH API Request Tests should be able update name of the user",
+              "timedOut": false,
+              "duration": 773,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// const randomName = faker.name.findName();\n// const randomJobTitle = faker.name.jobTitle();\nconst randomName = faker.person.fullName();\nconst randomJobTitle = faker.person.jobTitle();\nconst res = await axios.patch('https://reqres.in/api/users/2',\n    {\n        \"name\": randomName\n    }\n).then(res => res.data)\nconsole.log(res);\nexpect(res.name).equal(randomName);",
+              "err": {},
+              "uuid": "18dd6296-dbe5-42cb-a30e-bb918052573e",
+              "parentUUID": "5f25a683-6b7d-4beb-8f0a-66f519410bc5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "18dd6296-dbe5-42cb-a30e-bb918052573e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 773,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "4051bfb1-fc88-46b7-9702-7587da0b3b92",
+          "title": "POST API Request Tests",
+          "fullFile": "/home/thor/Projects/test-cases/api-tests/post_request.js",
+          "file": "/api-tests/post_request.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able post a user",
+              "fullTitle": "POST API Request Tests should be able post a user",
+              "timedOut": false,
+              "duration": 610,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// const randomName = faker.name.findName();\n// const randomJobTitle = faker.name.jobTitle();\nconst randomName = faker.person.fullName();\nconst randomJobTitle = faker.person.jobTitle();\nconst res = await axios.post('https://reqres.in/api/users',\n    {\n        \"name\": randomName,\n        \"job\": randomJobTitle\n    }\n).then(res => res.data)\nconsole.log(res);\nexpect(res.name).equal(randomName);\nexpect(res.job).equal(randomJobTitle);",
+              "err": {},
+              "uuid": "4d49fc20-04da-4876-9397-75b458e0d02a",
+              "parentUUID": "4051bfb1-fc88-46b7-9702-7587da0b3b92",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4d49fc20-04da-4876-9397-75b458e0d02a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 610,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "3153dd76-c4b1-4dd9-b357-8084f9f54813",
+          "title": "PUT API Request Tests",
+          "fullFile": "/home/thor/Projects/test-cases/api-tests/put_request.js",
+          "file": "/api-tests/put_request.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able update a user",
+              "fullTitle": "PUT API Request Tests should be able update a user",
+              "timedOut": false,
+              "duration": 591,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// const randomName = faker.name.findName();\n// const randomJobTitle = faker.name.jobTitle();\nconst randomName = faker.person.fullName();\nconst randomJobTitle = faker.person.jobTitle();\nconst res = await axios.put('https://reqres.in/api/users/2',\n    {\n        \"name\": randomName,\n        \"job\": randomJobTitle\n    }\n).then(res => res.data)\nconsole.log(res);\nexpect(res.name).equal(randomName);\nexpect(res.job).equal(randomJobTitle);",
+              "err": {},
+              "uuid": "dbde8bcb-705a-45d1-8589-44ba9ef5ac85",
+              "parentUUID": "3153dd76-c4b1-4dd9-b357-8084f9f54813",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dbde8bcb-705a-45d1-8589-44ba9ef5ac85"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 591,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 10000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.3.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
